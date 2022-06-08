@@ -7,16 +7,16 @@ public class Student {
     private String universityName;
     private String departmentCode;
     private String departmentName;
-    private int studentYearOfEnrollment;
+    private int studentYearOfEnrolment;
 
-    public Student(int studentID, String studentName, String studentDateOfBirth, String universityName, String departmentCode, String departmentName, int studentYearOfEnrollment) {
+    public Student(int studentID, String studentName, String studentDateOfBirth, String universityName, String departmentCode, String departmentName, int studentYearOfEnrolment) {
         this.studentID = studentID;
         this.studentName = studentName;
         this.studentDateOfBirth = studentDateOfBirth;
         this.universityName = universityName;
         this.departmentCode = departmentCode;
         this.departmentName = departmentName;
-        this.studentYearOfEnrollment = studentYearOfEnrollment;
+        this.studentYearOfEnrolment = studentYearOfEnrolment;
     }
 
     public int getStudentID() {
@@ -67,11 +67,11 @@ public class Student {
         this.departmentName = departmentName;
     }
 
-    public int getStudentYearOfEnrollment() {
-        return studentYearOfEnrollment;
+    public int getStudentYearOfEnrolment() {
+        return studentYearOfEnrolment;
     }
 
-    public void setStudentYearOfEnrollment(int studentYearOfEnrollment) {
-        this.studentYearOfEnrollment = studentYearOfEnrollment;
+    public void setStudentYearOfEnrolment(int studentYearOfEnrolment) {
+        this.studentYearOfEnrolment = studentYearOfEnrolment;
     }
 }

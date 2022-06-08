@@ -56,6 +56,10 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
         return null;
     }
 
+    public int getSteps(){
+        return steps;
+    }
+
     private void addSteps(){
         steps++;
     }
