@@ -74,4 +74,8 @@ public class Student {
     public void setStudentYearOfEnrolment(int studentYearOfEnrolment) {
         this.studentYearOfEnrolment = studentYearOfEnrolment;
     }
+    public String toString() {
+        return "\n" + "Student ID: " + this.studentID + "\n" + "Name and surname: " + this.studentName + "\n" + "Date of birth: " + this.studentDateOfBirth + "\n" + "University: " + this.universityName
+                + "\n" + "Department code: " + this.departmentCode + "\n" + "Department: " + this.departmentName + "\n" + "Year of enrolment: " + this.studentYearOfEnrolment + "\n\n";
+    }
 }

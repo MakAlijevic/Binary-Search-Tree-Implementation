@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.ArrayList;
+
 public class BinarySearchTree<Key extends Comparable<Key>, Value> {
 
     private Node<Key, Value> root;
@@ -35,6 +37,30 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
 
     public void iterate() {
         inorder(root);
+    }
+
+    public void inorderSpecific(int elements){
+        ArrayList<Value> list = new ArrayList<Value>();
+        inorderSpecific(root, elements, list);
+        for (int i = 0; i<elements;i++) {
+            System.out.println(list.get(i));
+        }
+    }
+
+    public void preorderSpecific(int elements){
+        ArrayList<Value> list = new ArrayList<Value>();
+        preorderSpecific(root, elements, list);
+        for (int i = 0; i<elements;i++) {
+            System.out.println(list.get(i));
+        }
+    }
+
+    public void postorderSpecific(int elements){
+        ArrayList<Value> list = new ArrayList<Value>();
+        postorderSpecific(root, elements, list);
+        for (int i = 0; i<elements;i++) {
+            System.out.println(list.get(i));
+        }
     }
 
     public Value get(Key key) {
@@ -162,5 +188,33 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
         inorder(x.left);
         System.out.println(x.key);
         inorder(x.right);
+    }
+
+    private void inorderSpecific(Node<Key, Value> x, int elements, ArrayList<Value> list) {
+        if (x == null) {
+            return;
+        }
+        inorderSpecific(x.left, elements, list);
+        list.add(x.value);
+        inorderSpecific(x.right, elements, list);
+    }
+
+    private void preorderSpecific(Node<Key, Value> x, int elements, ArrayList<Value> list) {
+        if (x == null) {
+            return;
+        }
+            list.add(x.value);
+            preorderSpecific(x.left, elements, list);
+            preorderSpecific(x.right, elements, list);
+
+    }
+
+    private void postorderSpecific(Node<Key, Value> x, int elements, ArrayList<Value> list) {
+        if (x == null) {
+            return;
+        }
+        postorderSpecific(x.left, elements, list);
+        postorderSpecific(x.right, elements, list);
+        list.add(x.value);
     }
 }
